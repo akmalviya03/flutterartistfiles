@@ -1,0 +1,131 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for background -->
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Flutter logo gradient -->
+    <linearGradient id="flutterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#42a5f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1976d2;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Code block gradient -->
+    <linearGradient id="codeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d3748;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#1a202c;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Hot reload animation -->
+    <animateTransform 
+      id="hotReloadPulse"
+      attributeName="transform"
+      attributeType="XML"
+      type="scale"
+      values="1;1.1;1"
+      dur="2s"
+      repeatCount="indefinite"/>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#backgroundGradient)"/>
+  
+  <!-- Background pattern -->
+  <g opacity="0.1">
+    <circle cx="100" cy="100" r="40" fill="white"/>
+    <circle cx="700" cy="300" r="30" fill="white"/>
+    <circle cx="650" cy="50" r="25" fill="white"/>
+    <circle cx="150" cy="350" r="35" fill="white"/>
+  </g>
+  
+  <!-- Main content container -->
+  <rect x="50" y="50" width="700" height="300" rx="20" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  
+  <!-- Code block representation -->
+  <g transform="translate(200, 70)">
+    <rect width="350" height="180" rx="10" fill="url(#codeGradient)" stroke="rgba(66, 165, 245, 0.5)" stroke-width="2"/>
+    
+    <!-- Code lines -->
+    <g fill="rgba(255,255,255,0.9)" font-family="'Courier New', monospace" font-size="14">
+      <text x="20" y="30" fill="#ff6b6b">@override</text>
+      <text x="20" y="50" fill="#4ecdc4">void</text>
+      <text x="60" y="50" fill="#ffe66d">reassemble</text>
+      <text x="145" y="50" fill="white">()</text>
+      <text x="170" y="50" fill="white">{</text>
+      
+      <text x="40" y="75" fill="#4ecdc4">super</text>
+      <text x="80" y="75" fill="white">.</text>
+      <text x="90" y="75" fill="#ffe66d">reassemble</text>
+      <text x="175" y="75" fill="white">();</text>
+      
+      <text x="40" y="100" fill="#95e1d3">// Hot reload magic</text>
+      <text x="40" y="125" fill="#ffe66d">_refreshState</text>
+      <text x="150" y="125" fill="white">();</text>
+      
+      <text x="20" y="150" fill="white">}</text>
+    </g>
+    
+    <!-- Hot reload indicator -->
+    <g transform="translate(240, 20)">
+      <circle cx="0" cy="0" r="8" fill="#ff6b6b" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="15" y="5" fill="white" font-size="12" font-family="Arial, sans-serif">HOT RELOAD</text>
+    </g>
+  </g>
+  
+  <!-- Reload arrows -->
+  <g transform="translate(600, 120)" fill="rgba(255,255,255,0.8)">
+    <path d="M0 20 Q20 0 40 20 Q20 40 0 20" stroke="rgba(255,255,255,0.8)" stroke-width="3" fill="none">
+      <animateTransform attributeName="transform" type="rotate" values="0 20 20;360 20 20" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <polygon points="35,15 40,20 35,25" fill="rgba(255,255,255,0.8)">
+      <animateTransform attributeName="transform" type="rotate" values="0 20 20;360 20 20" dur="4s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="290" text-anchor="middle" fill="white" font-size="32" font-weight="bold" font-family="Arial, sans-serif">
+    Flutter reassemble() Method
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="325" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="16" font-family="Arial, sans-serif">
+    Understanding Hot Reload Magic
+  </text>
+  
+  <!-- Decorative elements -->
+  <g opacity="0.6">
+    <!-- Left side decorative -->
+    <circle cx="50" cy="200" r="3" fill="white">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="30" cy="180" r="2" fill="white">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Right side decorative -->
+    <circle cx="750" cy="200" r="3" fill="white">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="770" cy="220" r="2" fill="white">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Flutter Artist watermark -->
+  <text x="750" y="380" text-anchor="end" fill="rgba(255,255,255,0.5)" font-size="12" font-family="Arial, sans-serif">
+    Flutter Artist
+  </text>
+</svg>
