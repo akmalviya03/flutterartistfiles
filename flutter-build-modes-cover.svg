@@ -1,0 +1,189 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3c72;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a5298;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Debug mode gradient (Red) -->
+    <linearGradient id="debugGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ee5a52;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Profile mode gradient (Orange) -->
+    <linearGradient id="profileGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffa726;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff9800;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Release mode gradient (Green) -->
+    <linearGradient id="releaseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#66bb6a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4caf50;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Shadow effect -->
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#backgroundGradient)"/>
+  
+  <!-- Background pattern -->
+  <g opacity="0.1">
+    <circle cx="150" cy="100" r="30" fill="white"/>
+    <circle cx="650" cy="300" r="25" fill="white"/>
+    <circle cx="100" cy="350" r="20" fill="white"/>
+    <circle cx="700" cy="80" r="35" fill="white"/>
+  </g>
+  
+  <!-- Main container -->
+  <rect x="50" y="50" width="700" height="300" rx="20" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  
+  <!-- Debug Mode Section -->
+  <g transform="translate(80, 80)">
+    <rect width="180" height="120" rx="10" fill="url(#debugGradient)" filter="url(#shadow)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="90" y="25" text-anchor="middle" fill="white" font-size="16" font-weight="bold" font-family="Arial, sans-serif">DEBUG</text>
+    <g fill="white" font-family="Arial, sans-serif" font-size="12">
+      <text x="10" y="45">🔧 Hot Reload</text>
+      <text x="10" y="60">🐛 Full Debugging</text>
+      <text x="10" y="75">⚡ Fast Development</text>
+      <text x="10" y="90">📊 DevTools Support</text>
+      <text x="10" y="105">🔍 Assertions Enabled</text>
+    </g>
+  </g>
+  
+  <!-- Profile Mode Section -->
+  <g transform="translate(310, 80)">
+    <rect width="180" height="120" rx="10" fill="url(#profileGradient)" filter="url(#shadow)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="90" y="25" text-anchor="middle" fill="white" font-size="16" font-weight="bold" font-family="Arial, sans-serif">PROFILE</text>
+    <g fill="white" font-family="Arial, sans-serif" font-size="12">
+      <text x="10" y="45">📈 Performance Tracing</text>
+      <text x="10" y="60">🎯 Optimization</text>
+      <text x="10" y="75">📱 Real Device Only</text>
+      <text x="10" y="90">⏱️ Timeline Events</text>
+      <text x="10" y="105">🔧 Limited Debugging</text>
+    </g>
+  </g>
+  
+  <!-- Release Mode Section -->
+  <g transform="translate(540, 80)">
+    <rect width="180" height="120" rx="10" fill="url(#releaseGradient)" filter="url(#shadow)">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="90" y="25" text-anchor="middle" fill="white" font-size="16" font-weight="bold" font-family="Arial, sans-serif">RELEASE</text>
+    <g fill="white" font-family="Arial, sans-serif" font-size="12">
+      <text x="10" y="45">🚀 Maximum Performance</text>
+      <text x="10" y="60">📦 Minimal Size</text>
+      <text x="10" y="75">🏪 App Store Ready</text>
+      <text x="10" y="90">⚡ Fully Optimized</text>
+      <text x="10" y="105">🔒 Production Ready</text>
+    </g>
+  </g>
+  
+  <!-- Workflow arrows -->
+  <g stroke="rgba(255,255,255,0.6)" stroke-width="3" fill="none" marker-end="url(#arrowhead)">
+    <!-- Debug to Profile arrow -->
+    <path d="M 270 140 Q 290 130 300 140">
+      <animate attributeName="stroke-dasharray" values="0,20;10,10;20,0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <!-- Profile to Release arrow -->
+    <path d="M 500 140 Q 520 130 530 140">
+      <animate attributeName="stroke-dasharray" values="0,20;10,10;20,0" dur="2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" fill="rgba(255,255,255,0.6)">
+      <polygon points="0 0, 10 3.5, 0 7" />
+    </marker>
+  </defs>
+  
+  <!-- Performance indicators for Debug Mode -->
+  <g transform="translate(90, 230)">
+    <text x="80" y="-5" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="Arial, sans-serif">DEBUG</text>
+    
+    <!-- Development Speed - High (90%) -->
+    <text x="0" y="12" fill="white" font-size="9" font-family="Arial, sans-serif">Development Speed</text>
+    <rect x="0" y="16" width="160" height="6" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <rect x="0" y="16" width="144" height="6" rx="3" fill="#ff6b6b"/>
+    
+    <!-- Analysis Power - Medium (50%) -->
+    <text x="0" y="32" fill="white" font-size="9" font-family="Arial, sans-serif">Analysis Power</text>
+    <rect x="0" y="36" width="160" height="6" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <rect x="0" y="36" width="80" height="6" rx="3" fill="#ff6b6b"/>
+    
+    <!-- Runtime Performance - Low (30%) -->
+    <text x="0" y="52" fill="white" font-size="9" font-family="Arial, sans-serif">Runtime Performance</text>
+    <rect x="0" y="56" width="160" height="6" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <rect x="0" y="56" width="48" height="6" rx="3" fill="#ff6b6b"/>
+  </g>
+  
+  <!-- Performance indicators for Profile Mode -->
+  <g transform="translate(320, 230)">
+    <text x="80" y="-5" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="Arial, sans-serif">PROFILE</text>
+    
+    <!-- Development Speed - Low (20%) -->
+    <text x="0" y="12" fill="white" font-size="9" font-family="Arial, sans-serif">Development Speed</text>
+    <rect x="0" y="16" width="160" height="6" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <rect x="0" y="16" width="32" height="6" rx="3" fill="#ffa726"/>
+    
+    <!-- Analysis Power - High (95%) -->
+    <text x="0" y="32" fill="white" font-size="9" font-family="Arial, sans-serif">Analysis Power</text>
+    <rect x="0" y="36" width="160" height="6" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <rect x="0" y="36" width="152" height="6" rx="3" fill="#ffa726"/>
+    
+    <!-- Runtime Performance - High (85%) -->
+    <text x="0" y="52" fill="white" font-size="9" font-family="Arial, sans-serif">Runtime Performance</text>
+    <rect x="0" y="56" width="160" height="6" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <rect x="0" y="56" width="136" height="6" rx="3" fill="#ffa726"/>
+  </g>
+  
+  <!-- Performance indicators for Release Mode -->
+  <g transform="translate(550, 230)">
+    <text x="80" y="-5" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="Arial, sans-serif">RELEASE</text>
+    
+    <!-- Development Speed - Very Low (10%) -->
+    <text x="0" y="12" fill="white" font-size="9" font-family="Arial, sans-serif">Development Speed</text>
+    <rect x="0" y="16" width="160" height="6" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <rect x="0" y="16" width="16" height="6" rx="3" fill="#66bb6a"/>
+    
+    <!-- Analysis Power - Very Low (5%) -->
+    <text x="0" y="32" fill="white" font-size="9" font-family="Arial, sans-serif">Analysis Power</text>
+    <rect x="0" y="36" width="160" height="6" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <rect x="0" y="36" width="8" height="6" rx="3" fill="#66bb6a"/>
+    
+    <!-- Runtime Performance - Maximum (100%) -->
+    <text x="0" y="52" fill="white" font-size="9" font-family="Arial, sans-serif">Runtime Performance</text>
+    <rect x="0" y="56" width="160" height="6" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <rect x="0" y="56" width="160" height="6" rx="3" fill="#66bb6a"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="330" text-anchor="middle" fill="white" font-size="28" font-weight="bold" font-family="Arial, sans-serif">
+    Flutter Build Modes
+  </text>
+  
+  <!-- Flutter Artist watermark -->
+  <text x="750" y="390" text-anchor="end" fill="rgba(255,255,255,0.5)" font-size="12" font-family="Arial, sans-serif">
+    Flutter Artist
+  </text>
+</svg>
