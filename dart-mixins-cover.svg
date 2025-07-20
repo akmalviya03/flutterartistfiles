@@ -1,0 +1,8 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#E91E63"/>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">Dart Mixins</text>
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="24" fill="#FCE4EC" text-anchor="middle">Code Reuse & Composition</text>
+  <polygon points="150,120 200,170 150,220 100,170" fill="#F06292" opacity="0.7"/>
+  <polygon points="250,120 300,170 250,220 200,170" fill="#EC407A" opacity="0.7"/>
+  <polygon points="600,400 660,460 600,520 540,460" fill="#AD1457" opacity="0.5"/>
+</svg>

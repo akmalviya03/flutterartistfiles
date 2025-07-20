@@ -1,0 +1,7 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#9C27B0"/>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">Dart Generics</text>
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="24" fill="#F3E5F5" text-anchor="middle">Type-Safe Collections</text>
+  <polygon points="180,100 230,150 180,200 130,150" fill="#BA68C8" opacity="0.7"/>
+  <polygon points="620,400 680,460 620,520 560,460" fill="#7B1FA2" opacity="0.5"/>
+</svg>

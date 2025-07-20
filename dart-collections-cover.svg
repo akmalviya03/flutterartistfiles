@@ -1,0 +1,26 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#3F51B5"/>
+  <text x="400" y="260" font-family="Arial, sans-serif" font-size="44" font-weight="bold" fill="white" text-anchor="middle">Dart Collections</text>
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="22" fill="#E8EAF6" text-anchor="middle">Lists, Maps, Sets &amp; Iterables</text>
+
+  <!-- Visual elements representing different collection types -->
+  <g opacity="0.8">
+    <!-- List representation -->
+    <rect x="120" y="120" width="50" height="50" fill="#5C6BC0" rx="5"/>
+    <rect x="180" y="120" width="50" height="50" fill="#7986CB" rx="5"/>
+    <rect x="240" y="120" width="50" height="50" fill="#9FA8DA" rx="5"/>
+
+    <!-- Map representation -->
+    <circle cx="600" cy="200" r="30" fill="#5C6BC0"/>
+    <circle cx="650" cy="200" r="25" fill="#7986CB"/>
+
+    <!-- Set representation -->
+    <polygon points="150,450 200,420 250,450 200,480" fill="#303F9F"/>
+    <polygon points="300,450 350,420 400,450 350,480" fill="#3F51B5"/>
+  </g>
+
+  <!-- Labels -->
+  <text x="195" y="200" font-family="Arial, sans-serif" font-size="14" fill="#E8EAF6" text-anchor="middle">List</text>
+  <text x="625" y="250" font-family="Arial, sans-serif" font-size="14" fill="#E8EAF6" text-anchor="middle">Map</text>
+  <text x="275" y="510" font-family="Arial, sans-serif" font-size="14" fill="#E8EAF6" text-anchor="middle">Set</text>
+</svg>
