@@ -1,0 +1,177 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="flutterBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#02569B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0175C2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="widgetGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#42A5F5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E88E5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="elementGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#26C6DA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00ACC1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="renderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#66BB6A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#43A047;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#F5F5F5"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#02569B">Flutter Architecture: Three Trees</text>
+  
+  <!-- Widget Tree Section -->
+  <g id="widget-tree">
+    <rect x="50" y="80" width="200" height="450" rx="15" fill="url(#widgetGradient)" opacity="0.1"/>
+    <text x="150" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1565C0">Widget Tree</text>
+    <text x="150" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#424242">Configuration</text>
+    
+    <!-- Widget Tree nodes -->
+    <circle cx="150" cy="160" r="20" fill="url(#widgetGradient)" stroke="#1565C0" stroke-width="2"/>
+    <text x="150" y="166" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">App</text>
+    
+    <circle cx="120" cy="220" r="15" fill="url(#widgetGradient)" stroke="#1565C0" stroke-width="2"/>
+    <text x="120" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Scaffold</text>
+    
+    <circle cx="180" cy="220" r="15" fill="url(#widgetGradient)" stroke="#1565C0" stroke-width="2"/>
+    <text x="180" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">AppBar</text>
+    
+    <circle cx="100" cy="280" r="12" fill="url(#widgetGradient)" stroke="#1565C0" stroke-width="2"/>
+    <text x="100" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Column</text>
+    
+    <circle cx="140" cy="280" r="12" fill="url(#widgetGradient)" stroke="#1565C0" stroke-width="2"/>
+    <text x="140" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Text</text>
+    
+    <circle cx="180" cy="280" r="12" fill="url(#widgetGradient)" stroke="#1565C0" stroke-width="2"/>
+    <text x="180" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Button</text>
+    
+    <circle cx="200" cy="280" r="12" fill="url(#widgetGradient)" stroke="#1565C0" stroke-width="2"/>
+    <text x="200" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Icon</text>
+    
+    <!-- Tree connections -->
+    <line x1="150" y1="180" x2="120" y2="205" stroke="#1565C0" stroke-width="2"/>
+    <line x1="150" y1="180" x2="180" y2="205" stroke="#1565C0" stroke-width="2"/>
+    <line x1="120" y1="235" x2="100" y2="268" stroke="#1565C0" stroke-width="2"/>
+    <line x1="120" y1="235" x2="140" y2="268" stroke="#1565C0" stroke-width="2"/>
+    <line x1="180" y1="235" x2="180" y2="268" stroke="#1565C0" stroke-width="2"/>
+    <line x1="180" y1="235" x2="200" y2="268" stroke="#1565C0" stroke-width="2"/>
+    
+    <!-- Widget characteristics -->
+    <rect x="60" y="350" width="180" height="80" rx="8" fill="white" stroke="#1565C0" stroke-width="1" opacity="0.9"/>
+    <text x="150" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565C0">Characteristics:</text>
+    <text x="150" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#424242">• Immutable</text>
+    <text x="150" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#424242">• Rebuilt frequently</text>
+    <text x="150" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#424242">• Lightweight</text>
+  </g>
+  
+  <!-- Element Tree Section -->
+  <g id="element-tree">
+    <rect x="300" y="80" width="200" height="450" rx="15" fill="url(#elementGradient)" opacity="0.1"/>
+    <text x="400" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#00838F">Element Tree</text>
+    <text x="400" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#424242">Lifecycle</text>
+    
+    <!-- Element Tree nodes -->
+    <rect x="380" y="150" width="40" height="25" rx="5" fill="url(#elementGradient)" stroke="#00838F" stroke-width="2"/>
+    <text x="400" y="166" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Element</text>
+    
+    <rect x="360" y="210" width="35" height="20" rx="4" fill="url(#elementGradient)" stroke="#00838F" stroke-width="2"/>
+    <text x="377" y="223" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Element</text>
+    
+    <rect x="405" y="210" width="35" height="20" rx="4" fill="url(#elementGradient)" stroke="#00838F" stroke-width="2"/>
+    <text x="422" y="223" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Element</text>
+    
+    <rect x="340" y="270" width="30" height="18" rx="3" fill="url(#elementGradient)" stroke="#00838F" stroke-width="2"/>
+    <text x="355" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">Element</text>
+    
+    <rect x="375" y="270" width="30" height="18" rx="3" fill="url(#elementGradient)" stroke="#00838F" stroke-width="2"/>
+    <text x="390" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">Element</text>
+    
+    <rect x="410" y="270" width="30" height="18" rx="3" fill="url(#elementGradient)" stroke="#00838F" stroke-width="2"/>
+    <text x="425" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">Element</text>
+    
+    <rect x="445" y="270" width="30" height="18" rx="3" fill="url(#elementGradient)" stroke="#00838F" stroke-width="2"/>
+    <text x="460" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">Element</text>
+    
+    <!-- Element connections -->
+    <line x1="400" y1="175" x2="377" y2="210" stroke="#00838F" stroke-width="2"/>
+    <line x1="400" y1="175" x2="422" y2="210" stroke="#00838F" stroke-width="2"/>
+    <line x1="377" y1="230" x2="355" y2="270" stroke="#00838F" stroke-width="2"/>
+    <line x1="377" y1="230" x2="390" y2="270" stroke="#00838F" stroke-width="2"/>
+    <line x1="422" y1="230" x2="425" y2="270" stroke="#00838F" stroke-width="2"/>
+    <line x1="422" y1="230" x2="460" y2="270" stroke="#00838F" stroke-width="2"/>
+    
+    <!-- Element characteristics -->
+    <rect x="310" y="350" width="180" height="80" rx="8" fill="white" stroke="#00838F" stroke-width="1" opacity="0.9"/>
+    <text x="400" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#00838F">Characteristics:</text>
+    <text x="400" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#424242">• Manages lifecycle</text>
+    <text x="400" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#424242">• Persistent</text>
+    <text x="400" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#424242">• BuildContext</text>
+  </g>
+  
+  <!-- Render Tree Section -->
+  <g id="render-tree">
+    <rect x="550" y="80" width="200" height="450" rx="15" fill="url(#renderGradient)" opacity="0.1"/>
+    <text x="650" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2E7D32">Render Tree</text>
+    <text x="650" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#424242">Layout & Paint</text>
+    
+    <!-- Render Tree nodes -->
+    <polygon points="630,160 650,140 670,160 650,180" fill="url(#renderGradient)" stroke="#2E7D32" stroke-width="2"/>
+    <text x="650" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Render</text>
+    
+    <polygon points="610,220 625,205 640,220 625,235" fill="url(#renderGradient)" stroke="#2E7D32" stroke-width="2"/>
+    <text x="625" y="223" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">Render</text>
+    
+    <polygon points="660,220 675,205 690,220 675,235" fill="url(#renderGradient)" stroke="#2E7D32" stroke-width="2"/>
+    <text x="675" y="223" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">Render</text>
+    
+    <polygon points="590,280 600,270 610,280 600,290" fill="url(#renderGradient)" stroke="#2E7D32" stroke-width="2"/>
+    <text x="600" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white">R</text>
+    
+    <polygon points="620,280 630,270 640,280 630,290" fill="url(#renderGradient)" stroke="#2E7D32" stroke-width="2"/>
+    <text x="630" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white">R</text>
+    
+    <polygon points="660,280 670,270 680,280 670,290" fill="url(#renderGradient)" stroke="#2E7D32" stroke-width="2"/>
+    <text x="670" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white">R</text>
+    
+    <polygon points="690,280 700,270 710,280 700,290" fill="url(#renderGradient)" stroke="#2E7D32" stroke-width="2"/>
+    <text x="700" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white">R</text>
+    
+    <!-- Render connections -->
+    <line x1="650" y1="180" x2="625" y2="205" stroke="#2E7D32" stroke-width="2"/>
+    <line x1="650" y1="180" x2="675" y2="205" stroke="#2E7D32" stroke-width="2"/>
+    <line x1="625" y1="235" x2="600" y2="270" stroke="#2E7D32" stroke-width="2"/>
+    <line x1="625" y1="235" x2="630" y2="270" stroke="#2E7D32" stroke-width="2"/>
+    <line x1="675" y1="235" x2="670" y2="270" stroke="#2E7D32" stroke-width="2"/>
+    <line x1="675" y1="235" x2="700" y2="270" stroke="#2E7D32" stroke-width="2"/>
+    
+    <!-- Render characteristics -->
+    <rect x="560" y="350" width="180" height="80" rx="8" fill="white" stroke="#2E7D32" stroke-width="1" opacity="0.9"/>
+    <text x="650" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32">Characteristics:</text>
+    <text x="650" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#424242">• Layout & Paint</text>
+    <text x="650" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#424242">• Hit-testing</text>
+    <text x="650" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#424242">• Performance critical</text>
+  </g>
+  
+  <!-- Flow arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#757575"/>
+    </marker>
+  </defs>
+  
+  <line x1="250" y1="200" x2="290" y2="200" stroke="#757575" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="500" y1="200" x2="540" y2="200" stroke="#757575" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Flow labels -->
+  <text x="270" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#757575">builds</text>
+  <text x="520" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#757575">creates</text>
+  
+  <!-- Bottom description -->
+  <rect x="50" y="550" width="700" height="40" rx="10" fill="white" stroke="#02569B" stroke-width="2" opacity="0.9"/>
+  <text x="400" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#02569B">Widget Tree → Element Tree → Render Tree</text>
+  <text x="400" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#424242">Configuration flows to lifecycle management flows to visual rendering</text>
+</svg>
