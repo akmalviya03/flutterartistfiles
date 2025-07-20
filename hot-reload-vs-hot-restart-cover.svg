@@ -1,0 +1,105 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f8fafc"/>
+
+  <!-- Background Pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e2e8f0" stroke-width="1" opacity="0.3"/>
+    </pattern>
+
+    <!-- Gradients -->
+    <linearGradient id="hotReloadGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16a34a;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="hotRestartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="flutterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#grid)"/>
+
+  <!-- Title -->
+  <text x="400" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#1e293b">
+    Hot Reload vs Hot Restart
+  </text>
+
+  <!-- Subtitle -->
+  <text x="400" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#64748b">
+    Flutter Development Made Easy
+  </text>
+
+  <!-- Left Side - Hot Reload -->
+  <g transform="translate(100, 120)">
+    <!-- Hot Reload Container -->
+    <rect x="0" y="0" width="280" height="220" rx="16" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+
+    <!-- Hot Reload Header -->
+    <rect x="0" y="0" width="280" height="50" rx="16" fill="url(#hotReloadGradient)"/>
+    <text x="140" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+      Hot Reload
+    </text>
+
+    <!-- Hot Reload Icon - Lightning Bolt -->
+    <circle cx="140" cy="90" r="25" fill="url(#hotReloadGradient)" opacity="0.2"/>
+    <text x="140" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="20">⚡</text>
+
+    <!-- Hot Reload Features -->
+    <text x="20" y="130" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e293b">Features:</text>
+    <text x="20" y="150" font-family="Arial, sans-serif" font-size="11" fill="#64748b">✓ Preserves app state</text>
+    <text x="20" y="165" font-family="Arial, sans-serif" font-size="11" fill="#64748b">✓ Super fast (~1-3 sec)</text>
+    <text x="20" y="180" font-family="Arial, sans-serif" font-size="11" fill="#64748b">✓ Perfect for UI changes</text>
+    <text x="20" y="195" font-family="Arial, sans-serif" font-size="11" fill="#64748b">✓ Skips main() &amp; initState()</text>
+
+  </g>
+
+  <!-- Right Side - Hot Restart -->
+  <g transform="translate(420, 120)">
+    <!-- Hot Restart Container -->
+    <rect x="0" y="0" width="280" height="220" rx="16" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+
+    <!-- Hot Restart Header -->
+    <rect x="0" y="0" width="280" height="50" rx="16" fill="url(#hotRestartGradient)"/>
+    <text x="140" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+      Hot Restart
+    </text>
+
+    <!-- Hot Restart Icon - Play Button -->
+    <circle cx="140" cy="90" r="25" fill="url(#hotRestartGradient)" opacity="0.2"/>
+    <text x="140" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="20">▶️</text>
+
+    <!-- Hot Restart Features -->
+    <text x="20" y="130" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e293b">Features:</text>
+    <text x="20" y="150" font-family="Arial, sans-serif" font-size="11" fill="#64748b">⚠ Resets app state</text>
+    <text x="20" y="165" font-family="Arial, sans-serif" font-size="11" fill="#64748b">⚠ Slower (~3-5 sec)</text>
+    <text x="20" y="180" font-family="Arial, sans-serif" font-size="11" fill="#64748b">✓ Runs main() &amp; initState()</text>
+    <text x="20" y="195" font-family="Arial, sans-serif" font-size="11" fill="#64748b">✓ For structural changes</text>
+
+  </g>
+
+  <!-- VS Arrow -->
+  <g transform="translate(390, 200)">
+    <circle cx="10" cy="0" r="" fill="url(#flutterGradient)"/>
+    <text x="10" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">VS</text>
+  </g>
+
+  <!-- Bottom Code Example -->
+  <g transform="translate(25, 360)">
+    <rect x="0" y="0" width="750" height="40" rx="8" fill="#1e293b"/>
+    <text x="20" y="25" font-family="Courier New, monospace" font-size="12" fill="#22c55e">
+      //Change Colors.blue to Colors.red → Use Hot Reload ⚡
+    </text>
+    <text x="450" y="25" font-family="Courier New, monospace" font-size="12" fill="#f59e0b">
+      //Edit initState() → Use Hot Restart ▶️
+    </text>
+  </g>
+
+</svg>
