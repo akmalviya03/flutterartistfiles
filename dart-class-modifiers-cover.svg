@@ -1,0 +1,66 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0f2fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-gradient)" />
+  
+  <!-- Decorative shapes -->
+  <circle cx="100" cy="100" r="80" fill="rgba(255,255,255,0.1)" />
+  <circle cx="1100" cy="530" r="120" fill="rgba(255,255,255,0.05)" />
+  <rect x="950" y="50" width="200" height="200" rx="20" fill="rgba(255,255,255,0.05)" transform="rotate(15 1050 150)" />
+  
+  <!-- Main Title -->
+  <text x="600" y="220" font-family="Arial, sans-serif" font-size="64" font-weight="bold" text-anchor="middle" fill="url(#text-gradient)">
+    Dart Class Modifiers
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="32" text-anchor="middle" fill="rgba(255,255,255,0.9)">
+    &amp; Mixins Guide
+  </text>
+  
+  <!-- Keywords displayed as badges -->
+  <g transform="translate(250, 380)">
+    <!-- abstract -->
+    <rect x="0" y="0" width="120" height="40" rx="20" fill="rgba(255,255,255,0.2)" />
+    <text x="60" y="25" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="white">abstract</text>
+    
+    <!-- base -->
+    <rect x="140" y="0" width="80" height="40" rx="20" fill="rgba(255,255,255,0.2)" />
+    <text x="180" y="25" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="white">base</text>
+    
+    <!-- interface -->
+    <rect x="240" y="0" width="120" height="40" rx="20" fill="rgba(255,255,255,0.2)" />
+    <text x="300" y="25" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="white">interface</text>
+    
+    <!-- final -->
+    <rect x="380" y="0" width="80" height="40" rx="20" fill="rgba(255,255,255,0.2)" />
+    <text x="420" y="25" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="white">final</text>
+    
+    <!-- sealed -->
+    <rect x="480" y="0" width="100" height="40" rx="20" fill="rgba(255,255,255,0.2)" />
+    <text x="530" y="25" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="white">sealed</text>
+    
+    <!-- mixin -->
+    <rect x="600" y="0" width="100" height="40" rx="20" fill="rgba(255,255,255,0.2)" />
+    <text x="650" y="25" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="white">mixin</text>
+  </g>
+  
+  <!-- Dart logo hint -->
+  <polygon points="600,480 620,520 580,520" fill="rgba(255,255,255,0.3)" />
+  
+  <!-- Bottom text -->
+  <text x="600" y="580" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="rgba(255,255,255,0.7)">
+    Complete Guide with Practical Examples
+  </text>
+</svg>
