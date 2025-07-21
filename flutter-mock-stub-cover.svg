@@ -1,0 +1,100 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#334155;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="title-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-gradient)" />
+  
+  <!-- Decorative elements -->
+  <circle cx="150" cy="150" r="120" fill="rgba(96,165,250,0.1)" />
+  <circle cx="1050" cy="480" r="100" fill="rgba(59,130,246,0.08)" />
+  <rect x="900" y="80" width="180" height="180" rx="15" fill="rgba(245,158,11,0.1)" transform="rotate(12 990 170)" />
+  
+  <!-- Mock/Test icons representation -->
+  <g transform="translate(100, 400)">
+    <!-- Mock object icon -->
+    <rect x="0" y="0" width="80" height="60" rx="8" fill="rgba(96,165,250,0.3)" stroke="#60a5fa" stroke-width="2" stroke-dasharray="5,5" />
+    <text x="40" y="35" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#60a5fa">Mock</text>
+    
+    <!-- Arrow -->
+    <path d="M 90 30 L 110 30 M 105 25 L 110 30 L 105 35" stroke="#f59e0b" stroke-width="2" fill="none" />
+    
+    <!-- Real object icon -->
+    <rect x="120" y="0" width="80" height="60" rx="8" fill="rgba(34,197,94,0.3)" stroke="#22c55e" stroke-width="2" />
+    <text x="160" y="35" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#22c55e">Real</text>
+  </g>
+  
+  <!-- Testing checklist -->
+  <g transform="translate(950, 350)">
+    <circle cx="0" cy="0" r="8" fill="#22c55e" />
+    <path d="M -3 0 L -1 2 L 3 -2" stroke="white" stroke-width="2" fill="none" />
+    <text x="15" y="5" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.8)">Unit Tests</text>
+    
+    <circle cx="0" cy="25" r="8" fill="#22c55e" />
+    <path d="M -3 25 L -1 27 L 3 23" stroke="white" stroke-width="2" fill="none" />
+    <text x="15" y="30" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.8)">Widget Tests</text>
+    
+    <circle cx="0" cy="50" r="8" fill="#22c55e" />
+    <path d="M -3 50 L -1 52 L 3 48" stroke="white" stroke-width="2" fill="none" />
+    <text x="15" y="55" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.8)">Integration</text>
+  </g>
+  
+  <!-- Main Title -->
+  <text x="600" y="200" font-family="Arial, sans-serif" font-size="56" font-weight="bold" text-anchor="middle" fill="url(#title-gradient)">
+    Flutter Mocking
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="250" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="rgba(255,255,255,0.9)">
+    &amp; Stubbing Guide
+  </text>
+  
+  <!-- Key concepts as badges -->
+  <g transform="translate(200, 320)">
+    <!-- Mock badge -->
+    <rect x="0" y="0" width="100" height="35" rx="17" fill="rgba(96,165,250,0.2)" stroke="#60a5fa" stroke-width="1" />
+    <text x="50" y="22" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#60a5fa">Mock</text>
+    
+    <!-- Stub badge -->
+    <rect x="120" y="0" width="100" height="35" rx="17" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="1" />
+    <text x="170" y="22" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f59e0b">Stub</text>
+    
+    <!-- Verify badge -->
+    <rect x="240" y="0" width="100" height="35" rx="17" fill="rgba(34,197,94,0.2)" stroke="#22c55e" stroke-width="1" />
+    <text x="290" y="22" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#22c55e">Verify</text>
+    
+    <!-- Test badge -->
+    <rect x="360" y="0" width="100" height="35" rx="17" fill="rgba(168,85,247,0.2)" stroke="#a855f7" stroke-width="1" />
+    <text x="410" y="22" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#a855f7">Test</text>
+    
+    <!-- Mockito badge -->
+    <rect x="480" y="0" width="120" height="35" rx="17" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="1" />
+    <text x="540" y="22" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ef4444">Mockito</text>
+  </g>
+  
+  <!-- Flutter logo hint -->
+  <g transform="translate(580, 450)">
+    <path d="M 0 20 L 20 0 L 40 20 L 20 40 Z" fill="url(#accent-gradient)" opacity="0.3" />
+    <path d="M 20 20 L 40 0 L 40 20 Z" fill="url(#title-gradient)" opacity="0.4" />
+  </g>
+  
+  <!-- Bottom description -->
+  <text x="600" y="550" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="rgba(255,255,255,0.7)">
+    Complete Testing Guide with Practical Examples
+  </text>
+</svg>
