@@ -1,0 +1,122 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="flutterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#54c5f8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1976d2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="syncGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#feca57;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- VSync Wave Pattern -->
+  <g opacity="0.3">
+    <path d="M0,300 Q150,200 300,300 T600,300 T900,300 T1200,300" stroke="url(#syncGradient)" stroke-width="3" fill="none"/>
+    <path d="M0,320 Q150,220 300,320 T600,320 T900,320 T1200,320" stroke="url(#syncGradient)" stroke-width="3" fill="none"/>
+    <path d="M0,340 Q150,240 300,340 T600,340 T900,340 T1200,340" stroke="url(#syncGradient)" stroke-width="3" fill="none"/>
+  </g>
+  
+  <!-- Animation Controller Visualization -->
+  <g transform="translate(400, 150)">
+    <!-- Controller Box -->
+    <rect x="0" y="50" width="200" height="100" rx="10" fill="#ffffff" opacity="0.9"/>
+    <text x="100" y="85" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">AnimationController</text>
+    <text x="100" y="105" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">with vsync</text>
+    <text x="100" y="125" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">vsync: this</text>
+    
+    <!-- VSync Indicator -->
+    <circle cx="220" cy="100" r="15" fill="url(#syncGradient)">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <text x="250" y="105" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">vsync</text>
+  </g>
+  
+  <!-- Ticker Provider Section -->
+  <g transform="translate(700, 200)">
+    <!-- Ticker Provider Boxes -->
+    <rect x="0" y="0" width="180" height="60" rx="8" fill="#ffffff" opacity="0.9"/>
+    <text x="90" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">SingleTickerProvider</text>
+    <text x="90" y="40" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">StateMixin</text>
+    
+    <rect x="0" y="80" width="180" height="60" rx="8" fill="#ffffff" opacity="0.9"/>
+    <text x="90" y="105" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">TickerProvider</text>
+    <text x="90" y="120" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">StateMixin</text>
+  </g>
+  
+  <!-- Sync Timing Visualization -->
+  <g transform="translate(100, 400)">
+    <!-- Frame Timeline -->
+    <line x1="0" y1="50" x2="400" y2="50" stroke="#ffffff" stroke-width="2"/>
+    
+    <!-- Frame Markers -->
+    <g fill="#ffffff">
+      <circle cx="0" cy="50" r="4"/>
+      <circle cx="67" cy="50" r="4"/>
+      <circle cx="134" cy="50" r="4"/>
+      <circle cx="201" cy="50" r="4"/>
+      <circle cx="268" cy="50" r="4"/>
+      <circle cx="335" cy="50" r="4"/>
+      <circle cx="400" cy="50" r="4"/>
+    </g>
+    
+    <!-- Frame Rate Labels -->
+    <text x="0" y="75" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">0ms</text>
+    <text x="67" y="75" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">16.67ms</text>
+    <text x="134" y="75" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">33.33ms</text>
+    <text x="268" y="75" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">60 FPS</text>
+    
+    <text x="200" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">vsync Synchronization</text>
+  </g>
+  
+  <!-- Animated Elements -->
+  <g transform="translate(800, 350)">
+    <!-- Rotating Element -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 50 50;360 50 50" dur="3s" repeatCount="indefinite"/>
+      <circle cx="50" cy="50" r="30" fill="none" stroke="url(#syncGradient)" stroke-width="4"/>
+      <circle cx="50" cy="20" r="6" fill="url(#syncGradient)"/>
+    </g>
+    
+    <!-- Pulsing Element -->
+    <g>
+      <circle cx="150" cy="50" r="25" fill="url(#flutterGradient)" opacity="0.8">
+        <animate attributeName="r" values="20;35;20" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="80" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#ffffff" text-anchor="middle">VSync in Flutter</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="120" font-family="Arial, sans-serif" font-size="24" fill="#e2e8f0" text-anchor="middle">Animation Controller Guide</text>
+  
+  <!-- Key Features -->
+  <g transform="translate(50, 500)">
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#54c5f8">✓ Smooth 60FPS Animations</text>
+    <text x="250" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#54c5f8">✓ Battery Efficient</text>
+    <text x="500" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#54c5f8">✓ Auto Lifecycle Management</text>
+    <text x="800" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#54c5f8">✓ Display Synchronized</text>
+  </g>
+  
+  <!-- Code Snippet -->
+  <g transform="translate(50, 550)">
+    <rect x="0" y="0" width="600" height="60" rx="8" fill="#1a1a1a" opacity="0.8"/>
+    <text x="10" y="20" font-family="Monaco, monospace" font-size="12" fill="#4fc3f7">AnimationController(</text>
+    <text x="10" y="35" font-family="Monaco, monospace" font-size="12" fill="#66bb6a">  duration: Duration(seconds: 2),</text>
+    <text x="10" y="50" font-family="Monaco, monospace" font-size="12" fill="#ffb74d">  vsync: this, // VSync provider</text>
+  </g>
+  
+  <!-- Blog Branding -->
+  <text x="1150" y="610" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="end">FlutterArtist</text>
+</svg>
